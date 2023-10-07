@@ -2,14 +2,10 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import streamlit as st
 
-from myutil import categorizar
+from myutil import categorizar #pip freeze > requirements.txt
 
 df = st.session_state["data"]
-
-print(df.info())
-
 st.subheader('Totais de ganhadores por categoria')
-
 
 df_disorder = pd.DataFrame(df.groupby(['desordem']).size().reset_index(
     name='concursos'))
@@ -31,7 +27,6 @@ data['vencedores'] = wins
 data['concursos'] = concourses
 df_data = pd.DataFrame(data)
 df_data = df_data.sort_values(by='index', ascending=True)
-print(df_data.info())
 
 st.bar_chart(
     df_data, x="index", y=["vencedores", "concursos"],

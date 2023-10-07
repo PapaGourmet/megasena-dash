@@ -12,5 +12,4 @@ listas_dinamicas['a'].append(1)
 listas_dinamicas['b'].append(2)
 listas_dinamicas['c'].append(3)
 
-# Imprima as listas dinâmicas
-print(listas_dinamicas)
+

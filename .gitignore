@@ -6,3 +6,5 @@ env/
 
 # Streamlit
 .streamlit/
+
+main.py

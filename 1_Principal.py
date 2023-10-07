@@ -17,8 +17,6 @@ df = df.drop(['id'], axis=1)
 
 df = df.sort_values(by='Concurso', ascending=True)
 
-print(df['Data'])
-
 # Exibir o DataFrame ordenado
 
 df['categoria'] = df['desordem'].apply(categorizar)
